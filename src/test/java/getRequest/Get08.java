@@ -148,13 +148,8 @@ public class Get08 extends SwapiApiBaseUrl {
 
 
         //step4 için 2.yoll
-        given()
-                .contentType(ContentType.JSON)
-                .when()
-                .get("/vehicles/4")
-                .then()
-                .statusCode(200);
 
+/*
 
 
         for (Map.Entry<String, Object> entry : expectedDataMap.entrySet()) {
@@ -167,6 +162,8 @@ public class Get08 extends SwapiApiBaseUrl {
             
 
         }
+
+ */
         
         //3. yöntem
 

@@ -1,6 +1,8 @@
 package getRequest;
 
 import baseURLs.DummyBaseURL;
+import com.google.gson.Gson;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
 import testData.DummyRestApiTestData;
@@ -13,6 +15,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertEquals;
 
 public class Get10 extends DummyBaseURL {
 
@@ -112,6 +115,11 @@ public class Get10 extends DummyBaseURL {
         
         metotoalrını kullanarak assertion işlemlerini tamamlayınız .
          */
+        JsonPath jsonPath = response.jsonPath();
+        Gson gson=new Gson();
+        String gsonString=gson.toJson(jsonPath);
+
+        System.out.println("gsonString = " + gsonString);
 
 
     }

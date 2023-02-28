@@ -99,7 +99,7 @@ public class Get07 extends DummyBaseURL {
         // {id=24, employee_name=Doris Wilder, employee_salary=85600, employee_age=23, profile_image=}]
 
 
-        List<Map<String, Objects>> employeeMap = jsonPath.getList("data");
+        List<Map<String, Object>> employeeMap = jsonPath.getList("data");
 
         System.out.println(employeeMap);
         //cıktı: [{id=3, employee_name=Ashton Cox, employee_salary=86000, employee_age=66, profile_image=},

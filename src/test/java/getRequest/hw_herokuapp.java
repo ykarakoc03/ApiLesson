@@ -6,7 +6,11 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class hw_herokuapp extends HerokuBaseURL {
@@ -29,7 +33,7 @@ public class hw_herokuapp extends HerokuBaseURL {
     @Test
     public void Test_heroku() {
 
-        specification.pathParam("booking","booking").queryParam("firstname","Sara");
+        specification.pathParam("booking","booking").queryParam("firstname","Sarah");
 
         Response response = given().spec(specification).when().get("/{booking}");
 
@@ -39,7 +43,14 @@ public class hw_herokuapp extends HerokuBaseURL {
 
         JsonPath jsonPath = response.jsonPath();
 
-        //assertTrue("bulunamadı", response.getBody("[0].bookingid").asString().is)
+        List<String> data = (jsonPath.getList(""));
+
+        System.out.println("data = " + data);
+
+        assertFalse("bookingid bulundu", data.contains("bookingid"));
+
+
+
 
 
 
