@@ -26,11 +26,11 @@ public class Get12 extends GorestBaseURL {
  		    Response body nin bu şekilde olduğunu doğrular
 
     {
-     "id": 724790,
-    "name": "Adheesh Chopra",
-    "email": "adheesh_chopra@schamberger-langosh.biz",
-    "gender": "male",
-    "status": "active"
+  "id": 738898,
+        "name": "Dharani Bharadwaj",
+        "email": "dharani_bharadwaj@kuvalis.net",
+        "gender": "male",
+        "status": "active"
 }
 
 
@@ -41,15 +41,17 @@ public class Get12 extends GorestBaseURL {
     public void testGet12() {
 
         // step 1: set URL
-        specification.pathParams("usersPath","users","idPath","724790");
+        specification.pathParams("usersPath","users","idPath","739372");
 
 
         // Step 2: Set Expecter Data
-        String expectedData =" \"id\": 724790,\n" +
-                "    \"name\": \"Adheesh Chopra\",\n" +
-                "    \"email\": \"adheesh_chopra@schamberger-langosh.biz\",\n" +
-                "    \"gender\": \"male\",\n" +
-                "    \"status\": \"active\"";
+        String expectedData ="    {\n" +
+                "        \"id\": 739372,\n" +
+                "        \"name\": \"Charak Marar\",\n" +
+                "        \"email\": \"marar_charak@metz.biz\",\n" +
+                "        \"gender\": \"female\",\n" +
+                "        \"status\": \"inactive\"\n" +
+                "   } ";
 
         System.out.println("expectedData = " + expectedData);
 
@@ -78,7 +80,7 @@ public class Get12 extends GorestBaseURL {
 
         // 2. yöntem direk Hash Map ile
         HashMap<String,Object> expectedDataMap =JsonToJava.convertJsonToJavaObject(expectedData, HashMap.class);
-
+        System.out.println("expectedDataMap = " + expectedDataMap);
 
         //3.Step
         Response response = given().spec(specification).when().get("/{usersPath}/{idPath}");
@@ -96,8 +98,7 @@ public class Get12 extends GorestBaseURL {
         assertEquals(expectedDataMap.get("status"),actualDataMap.get("status"));
         assertEquals(expectedDataMap.get("id"),actualDataMap.get("id"));
 
-
-
+        assertEquals(expectedDataMap,actualDataMap);
 
     }
 }

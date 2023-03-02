@@ -22,12 +22,12 @@ public class Get13 extends GorestBaseURL {
  		And
  		    Response body nin bu şekilde olduğunu doğrular
 
-    {
-        "id": 724776,
-        "name": "Divakar Guha",
-        "email": "guha_divakar@witting.co",
+      {
+        "id": 739373,
+        "name": "Dhatri Tagore",
+        "email": "tagore_dhatri@hansen-howe.info",
         "gender": "male",
-        "status": "active"
+        "status": "inactive"
     }
 
 
@@ -42,13 +42,13 @@ public class Get13 extends GorestBaseURL {
         //Step 1:  Set URL
         //https://gorest.co.in/public/v2/users/725273
         specification.pathParams("usersPath","users",
-                "idPath","724776");
+                "idPath","739373");
 
 
         //Step 2: Expected Data
 
-        GoRestCoApiPojo goRestCoApiPojo = new GoRestCoApiPojo(724776,"Divakar Guha",
-                "guha_divakar@witting.co","male","active");
+        GoRestCoApiPojo goRestCoApiPojo = new GoRestCoApiPojo(739373,"Dhatri Tagore",
+                "tagore_dhatri@hansen-howe.info","male","inactive");
 
 
         System.out.println("GoRestCoAPİ: " + goRestCoApiPojo);
@@ -70,7 +70,7 @@ public class Get13 extends GorestBaseURL {
         System.out.println("actualDataPojo = " + actualDataPojo);
 
         assertEquals(goRestCoApiPojo.getEmail(),actualDataPojo.getEmail());
-        assertEquals(goRestCoApiPojo.getGende(),actualDataPojo.getGende());
+        assertEquals(goRestCoApiPojo.getGender(),actualDataPojo.getGender());
         assertEquals(goRestCoApiPojo.getName(),actualDataPojo.getName());
         assertEquals(goRestCoApiPojo.getId(),actualDataPojo.getId());
         assertEquals(goRestCoApiPojo.getStatus(),actualDataPojo.getStatus());

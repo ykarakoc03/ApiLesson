@@ -20,18 +20,18 @@ public class GoRestCoApiPojo {
     private int id;
     private String name;
     private String email;
-    private String gende;
+    private String gender;
     private String status;
 
 
     public GoRestCoApiPojo() {
     }
 
-    public GoRestCoApiPojo(int id, String name, String email, String gende, String status) {
+    public GoRestCoApiPojo(int id, String name, String email, String gender, String status) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.gende = gende;
+        this.gender = gender;
         this.status = status;
     }
 
@@ -59,12 +59,12 @@ public class GoRestCoApiPojo {
         this.email = email;
     }
 
-    public String getGende() {
-        return gende;
+    public String getGender() {
+        return gender;
     }
 
-    public void setGende(String gende) {
-        this.gende = gende;
+    public void setGender(String gende) {
+        this.gender = gende;
     }
 
     public String getStatus() {
@@ -81,7 +81,7 @@ public class GoRestCoApiPojo {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", gende='" + gende + '\'' +
+                ", gender='" + gender + '\'' +
                 ", status='" + status + '\'' +
                 '}';
     }

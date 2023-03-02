@@ -26,7 +26,7 @@ Bearer Token = 74506a56089f8b79af241d5924e501c60177c4f4eaa3024813670e8389badad7
     public void testPost1() {
 
         specification.pathParam("usersPath","users");
-          //.header("Authorization", "Bearer 9aa94f55e266dfe9ab917a21554bb02c34e5cc9332a134e6bf492a47f9aefbde");
+        //.header("Authorization", "Bearer 9aa94f55e266dfe9ab917a21554bb02c34e5cc9332a134e6bf492a47f9aefbde");
         //bu şekilde buradanda token yazabiliriz
 
 
